@@ -2,30 +2,18 @@ package entity;
 
 public class User {
 	private int id;
-	private String userName;
-	private String pwd;
+	private String username;
+	private String password;
 	private String phone;
 
-	/**
-	 * 构造函数
-	 */
 	public User() {
-
 	}
 
-	/**
-	 * 构造函数
-	 * 
-	 * @param id
-	 * @param userName
-	 * @param pwd
-	 * @param phone
-	 */
-	public User(int id, String userName, String pwd, String phone) {
+	public User(int id, String username, String password, String phone) {
 		super();
 		this.id = id;
-		this.userName = userName;
-		this.pwd = pwd;
+		this.username = username;
+		this.password = password;
 		this.phone = phone;
 	}
 
@@ -37,20 +25,20 @@ public class User {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getPwd() {
-		return pwd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getPhone() {
@@ -61,8 +49,4 @@ public class User {
 		this.phone = phone;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", pwd=" + pwd + ", phone=" + phone + "]";
-	}
 }

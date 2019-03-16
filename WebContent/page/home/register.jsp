@@ -35,8 +35,8 @@
 							<div class="form-group">
 								<label for="input_email"><span
 									class="glyphicon glyphicon-lock"></span>&nbsp;密码 </label> <input
-									type="password" class="form-control" placeholder="" name="pwd"
-									id="pwd" maxlength="20">
+									type="password" class="form-control" placeholder="" name="password"
+									id="password" maxlength="20">
 							</div>
 							<div class="form-group">
 								<label for="input_email"><span
@@ -141,7 +141,7 @@ var codeIsOK = false;
 	//注册功能实现
 	function register() {
 		var userName = $("#userName").val();
-		var pwd = $("#pwd").val();
+		var password = $("#password").val();
 		var pwd_sure = $("#pwd_sure").val();
 		var phone = $("#phone").val();
 		var codeInput = $("#codeInput").val();
@@ -149,10 +149,10 @@ var codeIsOK = false;
 		if($.trim(userName)==""||userName==null){
 			alert("用户名不能为空！");
 			return;
-		}else if(pwd==""||pwd==null){
+		}else if(password==""||password==null){
 			alert("密码不能为空！");
 			return;
-		}else if(pwd.length<6){
+		}else if(password.length<6){
 			alert("密码至少6位！");
 			return;
 		}
@@ -160,7 +160,7 @@ var codeIsOK = false;
 			alert("确认密码不能为空!");
 			return;
 		}
-		else if(pwd != pwd_sure){
+		else if(password != pwd_sure){
 			alert("两次输入密码不一致！");
 			return;
 		}else if(phone==""||phone==null){
@@ -188,7 +188,7 @@ var codeIsOK = false;
 			//alert(1);
 			$.post("<%=path%>/addUser.action", {
 				userName:userName,
-				pwd : pwd,
+				password : password,
 				phone : phone
 			},function(data){
 				//alert(data);

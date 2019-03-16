@@ -17,7 +17,7 @@ public class BaseDao {
 	private static final String DRIVER="com.mysql.jdbc.Driver";
 	
 	/**连接*/
-	private static final String URL="jdbc:mysql://localhost:3306/mydb";
+	private static final String URL="jdbc:mysql://localhost:3306/dagang";
 	
 	/**账户名字*/
 	private static final String USER="root";

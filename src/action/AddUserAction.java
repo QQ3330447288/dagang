@@ -20,7 +20,7 @@ public class AddUserAction extends ActionSupport {
 	public void addUser() throws IOException {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String userName = request.getParameter("userName");
-		String pwd = Md5.md5(request.getParameter("pwd"), "Thanlon");
+		String pwd = Md5.md5(request.getParameter("password"), "Thanlon");
 //		System.out.println(pwd);
 		String phone = Md5.md5(request.getParameter("phone"), "Thanlon");
 		HttpServletResponse response = ServletActionContext.getResponse();
@@ -37,7 +37,7 @@ public class AddUserAction extends ActionSupport {
 	}
 
 	private Boolean iSaddUser(String userName, String pwd, String phone) {
-		String sql = "INSERT user(username,pwd,phone) VALUES(?,?,?)";
+		String sql = "INSERT user(username,password,phone) VALUES(?,?,?)";
 		List<Object> parames = new ArrayList<Object>();
 		parames.add(userName);
 		parames.add(pwd);
