@@ -7,7 +7,6 @@ import services.UserDao;
 import services.impl.UserDaoImpl;
 
 public class UserAction extends SuperAction implements ModelDriven<User> {
-
 	private User user = new User();
 
 	public String login() {

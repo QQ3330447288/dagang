@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <!-- add description message which will be showing on the search-->
 <meta name="keywords" content="">
-<title>${sessionScope.jobinfo_list}</title>
+<title>${sessionScope.lawinfo_list}</title>
 <%@include file="blockcss.jsp"%>
 </head>
 <body>
@@ -21,29 +21,22 @@
 
 	<div class="container" style="margin-top: 60px">
 		<div class="row">
-
 			<div class="col-md-9">
+
 				<div class="panel panel-primary">
-					<div class="panel-heading">招工信息</div>
-					<s:iterator value="#session.jobinfo_list" var="jobinfo">
+					<div class="panel-heading">法律法规</div>
+					<s:iterator value="#session.lawinfo_list" var="lawinfo">
 						<div class="panel-body">
 							<div class="media well addboxshadow" style="background-color:white">
 								<div class="col-md-12">
 									<h4 class="card-title">
-										<s:property value="#jobinfo.jobname" />
+										<s:property value="#lawinfo.law_id" />
 									</h4>
 									<p class="card-text">
-										<s:property value="#jobinfo.requireInfo" />
+										<s:property value="#lawinfo.law" />
 									</p>
-									<a href="#" class="btn btn-primary">申请</a>
+									发布时间：20<s:property value="#lawinfo.addtime" />
 								</div>
-								<!-- 
-								<div class="col-md-1" style="margin-top: 2px">
-									<img src="<%=path%>/static/home/images/works.jpg" height="120"
-										alt="pic">
-								</div>
-								 -->
-
 							</div>
 						</div>
 					</s:iterator>
@@ -68,41 +61,19 @@
 						</nav>
 					</div>
 				</div>
-			
 			</div>
+
 			<div class="col-md-3">
-			<!-- 
 				<div class="panel panel-primary">
-					<div class="panel-heading">热门工作</div>
+					<div class="panel-heading">法律分类</div>
 					<div class="panel-body">
 						<ul>
-							<li class="list-group-item"><a href="index.html">招聘10名矿工</a></li>
-							<li class="list-group-item"><a href="index.html">招聘10名电子厂工人</a></li>
-							<li class="list-group-item"><a href="index.html">需要3个外卖送餐员</a></li>
-							<li class="list-group-item"><a href="index.html">招聘5名机械工人</a></li>
-						</ul>
-					</div>
-				</div>
-				 -->
-				<div class="panel panel-primary">
-					<div class="panel-heading">招工分类</div>
-					<div class="panel-body">
-						<ul>
-							<li class="list-group-item"><a href="index.html">矿工（10）</a></li>
-							<li class="list-group-item"><a href="index.html">建筑工人（12）</a></li>
-							<li class="list-group-item"><a href="index.html">电子厂职工（23）</a></li>
-							<li class="list-group-item"><a href="index.html">机械工人（23）</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">热门企业</div>
-					<div class="panel-body">
-						<ul>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
+							<li class="list-group-item"><a href="index.html">中华人民共和国劳动法(10)</a></li>
+							<li class="list-group-item"><a href="index.html">职工带新年休假条例(12)</a></li>
+							<li class="list-group-item"><a href="index.html">工伤认定办法(10)</a></li>
+							<li class="list-group-item"><a href="index.html">工伤保险条例(20)</a></li>
+							<li class="list-group-item"><a href="index.html">失业保险条例(40)</a></li>
+							<li class="list-group-item"><a href="index.html">住房公积金保险条例(20)</a></li>
 						</ul>
 					</div>
 				</div>
@@ -112,10 +83,9 @@
 	<%@include file="bottom.jsp"%>
 	<%@include file="blockjs.jsp"%>
 	<script>
-	//文档就绪函数
 	$(document).ready(function() {
 		//alert(11);
-		$.get("<%=path%>/findUserJobInfo.action?page=1&pageSize=5",
+		$.get("<%=path%>/findLawInfo.action?page=1&pageSize=5",
 							function(data, status) {
 								//alert(status);
 								//alert(data)
@@ -123,10 +93,10 @@
 				})
 	</script>
 	<script>
-    $(document).ready(function () {
-        $("#item1").addClass("active_diy");
-    })
-</script>
+		$(document).ready(function() {
+			$("#item2").addClass("active_diy");
+		})
+	</script>
 </body>
 </html>
 

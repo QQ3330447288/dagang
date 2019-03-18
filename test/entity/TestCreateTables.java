@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.junit.Test;
 
-public class TestAdmin {
+public class TestCreateTables {
 	@Test
 	public void testCreateTables() {
 		// 创建配置对象

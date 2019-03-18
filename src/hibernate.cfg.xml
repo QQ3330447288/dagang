@@ -28,5 +28,9 @@
 		<property name="hibernate.format_sql">true</property>
 		<mapping resource="entity/Admin.hbm.xml" />
 		<mapping resource="entity/User.hbm.xml" />
+		<mapping resource="entity/JobInfo.hbm.xml" />
+		<mapping resource="entity/JobCate.hbm.xml" />
+		<mapping resource="entity/LawInfo.hbm.xml" />
+		<mapping resource="entity/LawInfoCate.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

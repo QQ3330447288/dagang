@@ -11,6 +11,12 @@
 		<action name="addUser" class="action.AddUserAction"
 			method="addUser">
 		</action>
+		<action name="findUserJobInfo" class="action.UserJobInfoAction"
+			method="findJobInfo">
+		</action>
+		<action name="findLawInfo" class="action.UserLawInfoAction"
+			method="findLawInfo">
+		</action>
 	</package>
 	<package name="user" namespace="/user" extends="default">
 		<action name="*_*" class="action.{1}Action" method="{2}">

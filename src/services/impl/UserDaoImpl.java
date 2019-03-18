@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import dao.MyHbernateSessionFactory;
+import entity.JobInfo;
 import entity.User;
 import services.UserDao;
 import utils.Md5;
@@ -44,6 +45,65 @@ public class UserDaoImpl implements UserDao {
 			}
 		}
 
+	}
+
+	@Override
+	public List<JobInfo> queryJobInfo(int pageSize, int page) {
+//		System.out.println(pageSize);
+//		System.out.println(page);	
+		Transaction tx = null;
+		List<JobInfo> list = null;
+		String hql = "";
+		try {
+			Session session = MyHbernateSessionFactory.getSessionFactory().getCurrentSession();
+			tx = session.beginTransaction();
+			hql = "from JobInfo order by id asc";
+			String hql1 = "select count(*) from JobInfo";
+			Object count = session.createQuery(hql1).uniqueResult();
+//			System.out.println(count);
+			Query query = session.createQuery(hql).setFirstResult((page - 1) * pageSize).setMaxResults(pageSize);
+			list = query.list();
+			tx.commit();
+			return list;
+		} catch (Exception e) {
+			tx.commit();
+			e.printStackTrace();
+			return list;
+		} finally {
+			if (tx != null) {
+				tx = null;
+			}
+		}
+
+	}
+
+	@Override
+	public List<JobInfo> queryLawInfo(int pageSize, int page) {
+//		System.out.println(pageSize);
+//		System.out.println(page);
+		Transaction tx = null;
+		List<JobInfo> list = null;
+		String hql = "";
+		try {
+			Session session = MyHbernateSessionFactory.getSessionFactory().getCurrentSession();
+			tx = session.beginTransaction();
+			hql = "from LawInfo order by id asc";
+			String hql1 = "select count(*) from LawInfo";
+			Object count = session.createQuery(hql1).uniqueResult();
+//			System.out.println(count);
+			Query query = session.createQuery(hql).setFirstResult((page - 1) * pageSize).setMaxResults(pageSize);
+			list = query.list();
+			tx.commit();
+			return list;
+		} catch (Exception e) {
+			tx.commit();
+			e.printStackTrace();
+			return list;
+		} finally {
+			if (tx != null) {
+				tx = null;
+			}
+		}
 	}
 
 }
