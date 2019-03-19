@@ -60,10 +60,15 @@
 										type="button" value="获取验证码" onclick="sendCode(this)" style="border:none"></span>
 								</div>
 							</div>
+								<div class="form-group">
+								<label for="input_password"></label>
+									已有账号，请直接<a href="<%=path%>/page/home/login.jsp">登录</a>！
+								</div>
 							<div class="col-md-12">
 								<input type="submit" value="注册"
 									class="btn btn-log btn-primary btn-block" onclick="register();">
 							</div>
+							
 						</fieldset>
 					</div>
 				</div>

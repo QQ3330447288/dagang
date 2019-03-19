@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -11,23 +12,22 @@
 <meta name="description" content="">
 <!-- add description message which will be showing on the search-->
 <meta name="keywords" content="">
-<title>${sessionScope.jobinfo_list}</title>
+<title>大岗农名工服务平台</title>
 <%@include file="blockcss.jsp"%>
 </head>
 <body>
 	<!-- nav -->
 	<%@include file="nav.jsp"%>
 	<!-- /nav -->
-
 	<div class="container" style="margin-top: 60px">
 		<div class="row">
-
 			<div class="col-md-9">
 				<div class="panel panel-primary">
 					<div class="panel-heading">招工信息</div>
 					<s:iterator value="#session.jobinfo_list" var="jobinfo">
 						<div class="panel-body">
-							<div class="media well addboxshadow" style="background-color:white">
+							<div class="media well addboxshadow"
+								style="background-color: white">
 								<div class="col-md-12">
 									<h4 class="card-title">
 										<s:property value="#jobinfo.jobname" />
@@ -68,10 +68,10 @@
 						</nav>
 					</div>
 				</div>
-			
+
 			</div>
 			<div class="col-md-3">
-			<!-- 
+				<!-- 
 				<div class="panel panel-primary">
 					<div class="panel-heading">热门工作</div>
 					<div class="panel-body">
@@ -111,22 +111,36 @@
 	</div>
 	<%@include file="bottom.jsp"%>
 	<%@include file="blockjs.jsp"%>
+	<Script>
+	function refresh(){
+	    url = location.href;
+	    var once = url.split("#");
+	    if (once[1] != 1) {
+	        url += "#1";
+	        self.location.replace(url);
+	        window.location.reload();
+	    }
+	}
+	//setTimeout('refresh()', 15000);
+	</script>
 	<script>
 	//文档就绪函数
 	$(document).ready(function() {
 		//alert(11);
-		$.get("<%=path%>/findUserJobInfo.action?page=1&pageSize=5",
+		$.get("<%=path%>/findUserJobInfo.action?page=1&pageSize=6",
 							function(data, status) {
 								//alert(status);
 								//alert(data)
+								refresh();
 							});
-				})
+
+				});
 	</script>
 	<script>
-    $(document).ready(function () {
-        $("#item1").addClass("active_diy");
-    })
-</script>
+		$(document).ready(function() {
+			$("#item1").addClass("active_diy");
+		})
+	</script>
 </body>
 </html>
 

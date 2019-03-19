@@ -11,14 +11,13 @@
 <meta name="description" content="">
 <!-- add description message which will be showing on the search-->
 <meta name="keywords" content="">
-<title>${sessionScope.lawinfo_list}</title>
+<title>法律法规</title>
 <%@include file="blockcss.jsp"%>
 </head>
 <body>
 	<!-- nav -->
 	<%@include file="nav.jsp"%>
 	<!-- /nav -->
-
 	<div class="container" style="margin-top: 60px">
 		<div class="row">
 			<div class="col-md-9">
@@ -27,7 +26,8 @@
 					<div class="panel-heading">法律法规</div>
 					<s:iterator value="#session.lawinfo_list" var="lawinfo">
 						<div class="panel-body">
-							<div class="media well addboxshadow" style="background-color:white">
+							<div class="media well addboxshadow"
+								style="background-color: white">
 								<div class="col-md-12">
 									<h4 class="card-title">
 										<s:property value="#lawinfo.law_id" />
@@ -35,7 +35,8 @@
 									<p class="card-text">
 										<s:property value="#lawinfo.law" />
 									</p>
-									发布时间：20<s:property value="#lawinfo.addtime" />
+									发布时间：20
+									<s:property value="#lawinfo.addtime" />
 								</div>
 							</div>
 						</div>
@@ -82,6 +83,19 @@
 	</div>
 	<%@include file="bottom.jsp"%>
 	<%@include file="blockjs.jsp"%>
+	<Script>
+	function refresh(){
+	    url = location.href;
+	    //console.log(url);
+	    var once = url.split("#");
+	    if (once[1] != 1) {
+	        url += "#1";
+	        self.location.replace(url);
+	        window.location.reload();
+	    }
+	}
+	//setTimeout('refresh()', 1000);
+	</script>
 	<script>
 	$(document).ready(function() {
 		//alert(11);
@@ -89,6 +103,7 @@
 							function(data, status) {
 								//alert(status);
 								//alert(data)
+								refresh();
 							});
 				})
 	</script>
