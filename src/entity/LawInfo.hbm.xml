@@ -7,7 +7,7 @@
 		<id name="id" type="int">
 			<generator class="native" />
 		</id>
-		<property name="author" type="java.lang.String" />
+		<property name="title" type="java.lang.String" />
 		<property name="law" type="java.lang.String" />
 		<property name="law_id" type="int" />
 		<property name="addtime" type="date" />

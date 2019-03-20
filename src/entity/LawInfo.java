@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class LawInfo {
 	private int id;
-	private String author;
+	private String title;
 	private String law;
 	private int law_id;
 	private Date addtime;
@@ -12,10 +12,10 @@ public class LawInfo {
 	public LawInfo() {
 	}
 
-	public LawInfo(int id, String author, String law, int law_id, Date addtime) {
+	public LawInfo(int id, String title, String law, int law_id, Date addtime) {
 		super();
 		this.id = id;
-		this.author = author;
+		this.title = title;
 		this.law = law;
 		this.law_id = law_id;
 		this.addtime = addtime;
@@ -29,12 +29,12 @@ public class LawInfo {
 		this.id = id;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String gettitle() {
+		return title;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void settitle(String title) {
+		this.title = title;
 	}
 
 	public String getLaw() {

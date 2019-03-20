@@ -13,7 +13,30 @@
 <!-- add description message which will be showing on the search-->
 <meta name="keywords" content="">
 <title>大岗农名工服务平台</title>
+<%@include file="blockjs.jsp"%>
 <%@include file="blockcss.jsp"%>
+<script>
+function refresh(){
+    url = location.href;
+    var once = url.split("#");
+    if (once[1] != 1) {
+        url += "#1";
+        self.location.replace(url);
+        window.location.reload();
+    }
+}
+	//文档就绪函数
+	$(document).ready(function() {
+		//alert(11);
+		$.get("<%=path2%>/findUserJobInfo.action?page=1&pageSize=6",
+							function(data, status) {
+								//alert(status);
+								//alert(data)
+								refresh();
+							});
+
+				});
+</script>
 </head>
 <body>
 	<!-- nav -->
@@ -35,7 +58,7 @@
 									<p class="card-text">
 										<s:property value="#jobinfo.requireInfo" />
 									</p>
-									<a href="#" class="btn btn-primary">申请</a>
+									<!-- <a href="#" class="btn btn-primary">申请</a> -->
 								</div>
 								<!-- 
 								<div class="col-md-1" style="margin-top: 2px">
@@ -47,6 +70,7 @@
 							</div>
 						</div>
 					</s:iterator>
+					<!-- 
 					<div class="panel-body">
 						<nav aria-label="...">
 							<ul class="pagination">
@@ -67,23 +91,11 @@
 							</ul>
 						</nav>
 					</div>
+					-->
 				</div>
 
 			</div>
 			<div class="col-md-3">
-				<!-- 
-				<div class="panel panel-primary">
-					<div class="panel-heading">热门工作</div>
-					<div class="panel-body">
-						<ul>
-							<li class="list-group-item"><a href="index.html">招聘10名矿工</a></li>
-							<li class="list-group-item"><a href="index.html">招聘10名电子厂工人</a></li>
-							<li class="list-group-item"><a href="index.html">需要3个外卖送餐员</a></li>
-							<li class="list-group-item"><a href="index.html">招聘5名机械工人</a></li>
-						</ul>
-					</div>
-				</div>
-				 -->
 				<div class="panel panel-primary">
 					<div class="panel-heading">招工分类</div>
 					<div class="panel-body">
@@ -110,33 +122,8 @@
 		</div>
 	</div>
 	<%@include file="bottom.jsp"%>
-	<%@include file="blockjs.jsp"%>
-	<Script>
-	function refresh(){
-	    url = location.href;
-	    var once = url.split("#");
-	    if (once[1] != 1) {
-	        url += "#1";
-	        self.location.replace(url);
-	        window.location.reload();
-	    }
-	}
+	<script>
 	//setTimeout('refresh()', 15000);
-	</script>
-	<script>
-	//文档就绪函数
-	$(document).ready(function() {
-		//alert(11);
-		$.get("<%=path%>/findUserJobInfo.action?page=1&pageSize=6",
-							function(data, status) {
-								//alert(status);
-								//alert(data)
-								refresh();
-							});
-
-				});
-	</script>
-	<script>
 		$(document).ready(function() {
 			$("#item1").addClass("active_diy");
 		})

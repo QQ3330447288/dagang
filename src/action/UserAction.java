@@ -1,5 +1,7 @@
 package action;
 
+import org.apache.struts2.interceptor.validation.SkipValidation;
+
 import com.opensymphony.xwork2.ModelDriven;
 
 import entity.User;
@@ -9,6 +11,10 @@ import services.impl.UserDaoImpl;
 public class UserAction extends SuperAction implements ModelDriven<User> {
 	private User user = new User();
 
+	/**
+	 * ÓÃ»§µÇÂ¼
+	 * @return Boolean
+	 */
 	public String login() {
 		UserDao ud = new UserDaoImpl();
 		if (ud.userLogin(user)) {
@@ -18,6 +24,17 @@ public class UserAction extends SuperAction implements ModelDriven<User> {
 		} else {
 			return "failed";
 		}
+	}
+
+	/**
+	 * ×¢ÏúµÇÂ¼
+	 * @return String
+	 */
+	@SkipValidation
+	public String logout() {
+		if (session.getAttribute("loginUserName")!=null) 
+			session.removeAttribute("loginUserName");
+		return "logout_success";
 	}
 
 	@Override

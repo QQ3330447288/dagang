@@ -22,6 +22,7 @@
 		<action name="*_*" class="action.{1}Action" method="{2}">
 			<result name="success">/page/home/index.jsp</result>
 			<result name="failed">/page/home/login.jsp</result>
+			<result name="logout_success">/page/home/login.jsp</result>
 		</action>
 	</package>
 	<package name="admin" namespace="/admin" extends="default">
@@ -30,4 +31,5 @@
 			<result name="failed">/page/admin/login.jsp</result>
 		</action>
 	</package>
+
 </struts>    

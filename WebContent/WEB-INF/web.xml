@@ -7,15 +7,20 @@
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
 	</filter>
+	<!-- <filter-mapping> <filter-name>struts2</filter-name> <url-pattern>/*</url-pattern> 
+		</filter-mapping> -->
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>*.jsp</url-pattern>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.action</url-pattern>
+		<url-pattern>index.jsp</url-pattern>
 	</filter-mapping>
 	<welcome-file-list>
 		<welcome-file>page/home/index.jsp</welcome-file>
 	</welcome-file-list>
 	<error-page>
-    <error-code>404</error-code>
-    <location>/404.html</location>
-  </error-page>
+		<error-code>404</error-code>
+		<location>/404.html</location>
+	</error-page>
 </web-app>

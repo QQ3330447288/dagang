@@ -9,5 +9,6 @@
 		</id>
 		<property name="username" type="java.lang.String" />
 		<property name="password" type="java.lang.String" />
+		<property name="logintime" type="date"/>
 	</class>
 </hibernate-mapping>

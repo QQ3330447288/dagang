@@ -1,6 +1,11 @@
+@charset "UTF-8";
+body{
+    font-family: 'Microsoft YaHei', sans-serif;
+    background: #ededed;
+}
 *{margin:0;padding:0;}
 .navbar-default{
-    background-color: #222;
+    background-color: #337ab7;
     border: none;
     box-shadow: 0 0 10px 0 black;
 }
@@ -26,7 +31,7 @@
     color: white;
 }
 .navbar-default .navbar-nav>li:hover{
-    background: #a2a2a2;
+    background: #326ea2;
 }
 .navbar-toggle{
     margin-top: 8px;
@@ -41,21 +46,23 @@
 
 .side{position:fixed;width:54px;height:275px;right:0;top:214px;z-index:100;}
 .side ul li{list-style-type:none;width:54px;height:54px;float:left;position:relative;border-bottom:1px solid #444;}
-.side ul li .sidebox{position:absolute;width:54px;height:54px;top:0;right:0;transition:all 0.3s;background:#000;opacity:0.8;filter:Alpha(opacity=80);color:#fff;font:14px/54px "微软雅黑";overflow:hidden;}
+.side ul li .sidebox{position:absolute;width:54px;height:54px;top:0;right:0;transition:all 0.3s;background:#000;opacity:0.8;filter:Alpha(opacity=80);color:#fff;font:14px/54px "寰蒋闆呴粦";overflow:hidden;}
 .side ul li .sidetop{width:54px;height:54px;line-height:54px;display:inline-block;background:#000;opacity:0.8;filter:Alpha(opacity=80);transition:all 0.3s;}
 .side ul li .sidetop:hover{background:#ae1c1c;opacity:1;filter:Alpha(opacity=100);}
 .side ul li img{float:left;}
 
 .active_diy{
-    background: #a2a2a2;
-}
-
-
-body{
-    font-family: 'Microsoft YaHei', sans-serif;
-    background: #ededed;
+    background: #326ea2;
+    /*a2a2a2*/
 }
 .addboxshadow:hover{
     box-shadow: 0 2px 3px #888888;
 }
 
+body {
+	font-family: 'Microsoft YaHei', sans-serif;
+}
+
+.addboxshadow:hover {
+	box-shadow: 0 2px 3px #888888;
+}

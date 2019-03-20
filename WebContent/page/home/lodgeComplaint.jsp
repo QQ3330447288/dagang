@@ -35,7 +35,7 @@
 							</div>
 							<div class="form-group">
 								<label for="input_name"><span
-									class="glyphicon glyphicon-user"></span>&nbsp;投诉对象</label> <input
+									class="glyphicon glyphicon-user"></span>&nbsp;投诉对象(公司)</label> <input
 									type="text" class="form-control input" name="userName"
 									id="userName" maxlength="15" autofocus> <span id="tip"
 									style="color: red; font-weight: bold"></span>

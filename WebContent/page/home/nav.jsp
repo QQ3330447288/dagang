@@ -48,12 +48,29 @@
 				</li>
 				<li><a href="<%=path%>/page/home/register.jsp" target="__blank__"
 					role="button"><span class="glyphicon glyphicon-plus"></span>&nbsp;注册</a></li>
-				<li><a href="" style="" role="button" data-toggle="modal"
-					data-target="#myModal"><span
-						class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
-				<li><a href="<%=path%>/page/home/user.jsp" style="" role="button"> <span
-						class="glyphicon glyphicon-user"></span>&nbsp;会员中心
-				</a></li>
+				<li>
+				<%if (obj!=null&&!"".equals(obj)){
+					%>
+					<a href="<%=path%>/user/User_logout" role="button"><span
+						class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a>
+					<%}else{
+					%>
+					
+					</a>
+					<%}
+					%>		
+				</li>		
+				<li>
+				<%if (obj!=null&&!"".equals(obj)){
+				%>
+				<a href="<%=path%>/page/home/user.jsp" style="" role="button" id="item5"> 
+					<span class="glyphicon glyphicon-user"></span>&nbsp;个人中心
+				</a>
+				<%}else{
+				%>
+				<%}
+				%>
+				</li>
 			</ul>
 		</div>
 		<!--导航-->

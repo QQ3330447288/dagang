@@ -29,21 +29,30 @@
 							<div class="form-group">
 								<label for="input_name"><span
 									class="glyphicon glyphicon-user"></span>&nbsp;申请人</label> <input
-									type="text" class="form-control input" 
-									name="userName" id="userName" maxlength="15" placeholder="请输入申请人真实姓名">
-								<span id="tip" style="color: red; font-weight: bold" ></span>
+									type="text" class="form-control input" name="userName"
+									id="userName" maxlength="15" placeholder="请输入申请人真实姓名">
+								<span id="tip" style="color: red; font-weight: bold"></span>
+							</div>
+							<div class="form-group">
+								<label class="radio-inline"> <input type="radio"
+									name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">
+									男
+								</label> <label class="radio-inline"> <input type="radio"
+									name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									女
+								</label>
 							</div>
 							<div class="form-group">
 								<label for="input_name"><span
 									class="glyphicon glyphicon-user"></span>&nbsp;申请职务</label> <input
-									type="text" class="form-control input"
-									name="userName" id="userName" maxlength="15" autofocus>
-								<span id="tip" style="color: red; font-weight: bold" ></span>
+									type="text" class="form-control input" name="userName"
+									id="userName" maxlength="15" autofocus> <span id="tip"
+									style="color: red; font-weight: bold"></span>
 							</div>
 							<div class="form-group">
 								<label for="input_email"><span
 									class="glyphicon glyphicon-lock"></span>&nbsp; 申请理由</label>
-									<textarea class="form-control" rows="5" ></textarea>
+								<textarea class="form-control" rows="5"></textarea>
 							</div>
 							<div class="col-md-12">
 								<input type="submit" value="申请"
