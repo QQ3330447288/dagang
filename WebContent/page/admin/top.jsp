@@ -3,7 +3,7 @@
 <% String path = request.getContextPath();%>
 <!-- 头部 -->
 <div class="navbar">
-	<div class="navbar-inner">
+	<div class="navbar-inner" style="background: #337ab7;">
 		<div class="navbar-container">
 			<!-- Navbar Barnd -->
 			<div class="navbar-header pull-left">

@@ -31,7 +31,7 @@
 				</div>
 				<div class="panel-body">
 					<div style="color:green;font-size: 12px"></div>
-					<form action="<%=path%>/user/User_login" method="post">
+					<form action="<%=path%>/user/User_login.action" method="post">
 						<div class="form-group">
 							<label>账号</label> <input type="text" name="username"
 								class="form-control" placeholder="请输入用户账号" autofocus="autofocus">
