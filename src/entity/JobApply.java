@@ -4,20 +4,22 @@ import java.sql.Date;
 
 public class JobApply {
 	private int id;
-	private int job_id;
+	private String Applicant;
+	private int sexId;
+	private String applyjob;
 	private String reason;
-	private int user_id;
 	private Date addtime;
 
 	public JobApply() {
 	}
 
-	public JobApply(int id, int job_id, String reason, int user_id, Date addtime) {
+	public JobApply(int id, String applicant, int sexId, String applyjob, String reason, Date addtime) {
 		super();
 		this.id = id;
-		this.job_id = job_id;
+		Applicant = applicant;
+		this.sexId = sexId;
+		this.applyjob = applyjob;
 		this.reason = reason;
-		this.user_id = user_id;
 		this.addtime = addtime;
 	}
 
@@ -29,12 +31,28 @@ public class JobApply {
 		this.id = id;
 	}
 
-	public int getJob_id() {
-		return job_id;
+	public String getApplicant() {
+		return Applicant;
 	}
 
-	public void setJob_id(int job_id) {
-		this.job_id = job_id;
+	public void setApplicant(String applicant) {
+		Applicant = applicant;
+	}
+
+	public int getSexId() {
+		return sexId;
+	}
+
+	public void setSexId(int sexId) {
+		this.sexId = sexId;
+	}
+
+	public String getApplyjob() {
+		return applyjob;
+	}
+
+	public void setApplyjob(String applyjob) {
+		this.applyjob = applyjob;
 	}
 
 	public String getReason() {
@@ -43,14 +61,6 @@ public class JobApply {
 
 	public void setReason(String reason) {
 		this.reason = reason;
-	}
-
-	public int getUser_id() {
-		return user_id;
-	}
-
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
 	}
 
 	public Date getAddtime() {

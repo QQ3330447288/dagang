@@ -32,5 +32,7 @@
 		<mapping resource="entity/JobCate.hbm.xml" />
 		<mapping resource="entity/LawInfo.hbm.xml" />
 		<mapping resource="entity/LawInfoCate.hbm.xml" />
+		<mapping resource="entity/Complaint.hbm.xml" />
+		<mapping resource="entity/JobApply.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

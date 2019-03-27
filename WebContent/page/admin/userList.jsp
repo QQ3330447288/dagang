@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,27 @@
 				</div>
 				<!-- /Page Breadcrumb -->
 				<!-- Page Body -->
-				<div class="page-body">用户信息列表</div>
+				<div class="page-body">
+					<table class="table">
+						<tr>
+							<th>编号</th>
+							<th>用户名</th>
+							<th>手机号</th>
+							<th>注册时间</th>
+							<th>操作</th>
+						</tr>
+						<s:iterator value="#session.user_list" var="user">
+							<tr>
+								<th><s:property value="#user.id" /></th>
+								<th><s:property value="#user.username" /></th>
+								<th><s:property value="#user.phone" /></th>
+								<th>删除</th>
+							</tr>
+						</s:iterator>
+					</table>
+
+
+				</div>
 			</div>
 			<!-- /Page Body -->
 		</div>

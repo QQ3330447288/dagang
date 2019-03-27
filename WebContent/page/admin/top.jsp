@@ -36,7 +36,7 @@
 								class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
 								<li class="username"><a>David Stevenson</a></li>
 								<li class="dropdown-footer"><a
-									href="/admin/user/logout.html"> 退出登录 </a></li>
+									href="<%=path%>/admin/Admin_logout.action"> 退出登录 </a></li>
 							
 							</ul> <!--/Login Area Dropdown--></li>
 						<!-- /Account Area -->

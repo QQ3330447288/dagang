@@ -22,7 +22,7 @@ public class AddUserAction extends ActionSupport {
 		String userName = request.getParameter("userName");
 		String pwd = Md5.md5(request.getParameter("password"), "Thanlon");
 //		System.out.println(pwd);
-		String phone = Md5.md5(request.getParameter("phone"), "Thanlon");
+		String phone = request.getParameter("phone");
 		HttpServletResponse response = ServletActionContext.getResponse();
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();

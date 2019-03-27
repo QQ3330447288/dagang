@@ -107,17 +107,6 @@ function refresh(){
 						</ul>
 					</div>
 				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">热门企业</div>
-					<div class="panel-body">
-						<ul>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-							<li class="list-group-item"><a href="index.html">java</a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

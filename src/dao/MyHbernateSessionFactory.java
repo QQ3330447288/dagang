@@ -11,8 +11,6 @@ public class MyHbernateSessionFactory {
 
 	//构造方法私有化，保证单例模式
 	private MyHbernateSessionFactory() {
-		//super();
-		// TODO Auto-generated constructor stub
 	}
 
 //公有静态方法来获取会话工厂对象

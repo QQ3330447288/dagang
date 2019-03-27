@@ -26,7 +26,7 @@
 				<li><a href="<%=path%>/page/home/index.jsp#1" id="item1"><span
 						class="glyphicon glyphicon-home"></span>&nbsp;招工信息</a></li>
 				<li><a href="<%=path%>/page/home/lawInfo.jsp" id="item2">法律法规</a></li>
-				<li><a href="<%=path%>/page/home/apply.jsp" id="item3">招工申请</a></li>
+				<li><a href="<%=path%>/page/home/jobApply.jsp" id="item3">招工申请</a></li>
 				<li><a href="<%=path%>/page/home/lodgeComplaint.jsp" id="item4">我要投诉</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

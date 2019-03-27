@@ -25,25 +25,25 @@
 				<!-- Page Breadcrumb -->
 				<div class="page-breadcrumbs">
 					<ul class="breadcrumb">
-						<li class="active">>>招工信息管理>>添加招工信息</li>
+						<li class="active">>>法律法规管理>>发布法律法规</li>
 					</ul>
 				</div>
 				<!-- /Page Breadcrumb -->
 				<!-- Page Body -->
 				<div class="page-body">
-					<form action="<%=path%>/admin/Admin_addJobInfo.action"
-						method="post" onsubmit="confirm('确认添加？')">
+					<form action="<%=path%>/admin/Admin_addLawInfo.action" method="post"
+						onsubmit="confirm('确认发布？')">
 						<fieldset>
 							<div class="form-group">
 								<label for="input_name"><span
-									class="glyphicon glyphicon-user"></span>&nbsp;工作名; </label> <input
-									type="text" class="form-control input" name="jobname"
+									class="glyphicon glyphicon-user"></span>&nbsp;标题
+								</label> <input type="text" class="form-control input" name="title"
 									id="userName" maxlength="15" placeholder="">
 							</div>
 							<div class="form-group">
 								<label for="input_email"><span
-									class="glyphicon glyphicon-lock"></span>&nbsp; 任职要求</label>
-								<textarea class="form-control" rows="5" name="requireInfo"></textarea>
+									class="glyphicon glyphicon-lock"></span>&nbsp;法律信息</label>
+								<textarea class="form-control" rows="5" name="law"></textarea>
 							</div>
 							<div class="col-md-2">
 								<input type="submit" value="确认发布"
@@ -58,5 +58,9 @@
 		<!-- /Page Content -->
 	</div>
 	<%@include file="blockjs.jsp"%>
+
+	<script>
+		
+	</script>
 </body>
 </html>

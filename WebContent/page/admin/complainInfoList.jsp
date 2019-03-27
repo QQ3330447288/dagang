@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,20 +26,36 @@
 				<!-- Page Breadcrumb -->
 				<div class="page-breadcrumbs">
 					<ul class="breadcrumb">
-						<li class="active">>>招工信息管理>>招工信息列表</li>
+						<li class="active">>>招工信息管理>>投诉信息列表</li>
 					</ul>
 				</div>
 				<!-- /Page Breadcrumb -->
 				<!-- Page Body -->
-				<div class="page-body">招工信息列表</div>
+				<div class="page-body">
+					<table class="table">
+						<tr>
+							<th>编号</th>
+							<th>投诉人</th>
+							<th>投诉对象</th>
+							<th>投诉信息</th>
+						</tr>
+						<s:iterator value="#session.complaint_list" var="complaint_item">
+							<tr>
+								<th><s:property value="#complaint_item.id" /></th>
+								<th><s:property value="#complaint_item.complaint" /></th>
+								<th><s:property value="#complaint_item.complainObj"/></th>
+								<th><s:property value="#complaint_item.complainInfo" /></th>
+							</tr>
+						</s:iterator>
+					</table>
+
+				</div>
 			</div>
 			<!-- /Page Body -->
 		</div>
 		<!-- /Page Content -->
 	</div>
 	<%@include file="blockjs.jsp"%>
-	<script>
-		
-	</script>
+
 </body>
 </html>

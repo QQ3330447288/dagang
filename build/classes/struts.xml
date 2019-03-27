@@ -23,13 +23,22 @@
 			<result name="success">/page/home/index.jsp</result>
 			<result name="failed">/page/home/login.jsp</result>
 			<result name="logout_success">/page/home/login.jsp</result>
+			<result name="add_complaint_success">/page/home/complaintSuccess.jsp</result>
+			<result name="addApply_success">/page/home/jobApplySuccess.jsp</result>
 		</action>
 	</package>
 	<package name="admin" namespace="/admin" extends="default">
 		<action name="*_*" class="action.{1}Action" method="{2}">
 			<result name="success">/page/admin/index.jsp</result>
 			<result name="failed">/page/admin/login.jsp</result>
+			<result name="logout_success">/page/admin/login.jsp</result>
+			<result name="query_user_success">/page/admin/userList.jsp</result>
+			<result name="query_complaint_success">/page/admin/complainInfoList.jsp</result>
+			<result name="addjobcate_success">/page/admin/jobCateList.jsp</result>
+			<result name="query_jobcate_success">/page/admin/jobCateList.jsp</result>
+			<result name="addJobInfo_success">/page/admin/jobList.jsp</result>
+			<result name="addLawInfo_success">/page/admin/LawInfoList.jsp</result>
+			<result name="query_jobApply_success">/page/admin/jobApplyList.jsp</result>
 		</action>
 	</package>
-
 </struts>    

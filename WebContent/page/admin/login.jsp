@@ -27,7 +27,7 @@
 				<div class="panel-heading">登录</div>
 				<div class="panel-body">
 					<div style="color:green;font-size: 12px"></div>
-					<form action="<%=path%>/admin/Admin_login" method="post">
+					<form action="<%=path%>/admin/Admin_login.action" method="post">
 						<div class="form-group">
 							<label>账号</label> <input type="text" name="username"
 								class="form-control" placeholder="请输入管理员账号">
